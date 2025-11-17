@@ -1,0 +1,20 @@
+<main class="container mt-4">
+    <div class="page-header mb-4">
+        <h1>Catálogo de Editoras</h1>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover">
+            <tr class="bg-dark text-white fs-5">
+                <td class="p-2">Código</td>
+                <td class="p-2">Nome</td>
+            </tr>
+            <tr *ngFor="let editora of editoras">
+                <td class="col-md-2"> {{editora.codEditora}}<br>
+                    <dd> <button type="button" class="btn btn-danger" (click)="excluir(editora.codigo.toString())">Excluir</button>
+                </td>
+                <td class="col-md-6">{{editora.nome}}</td>
+            </tr>
+        </table>
+    </div>
+</main>
